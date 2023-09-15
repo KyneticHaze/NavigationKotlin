@@ -30,7 +30,7 @@ class FirstFragment : Fragment() {
         val firstButton = binding.firstFragmentButton
 
         firstButton.setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment()
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment("Furkan")
 
             Navigation.findNavController(it).navigate(action)
 
