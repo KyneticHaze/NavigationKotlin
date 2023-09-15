@@ -27,6 +27,13 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        arguments?.let {
+            // Second Fragment'ta bir argüman belirlediğimiz için SecondFragmentArgs diye bir sınıf otomatikman oluşturuldu.
+            val kullaniciAdi = SecondFragmentArgs.fromBundle(it).username
+
+            binding.text2.text = kullaniciAdi
+        }
+
         val secondButton = binding.secondFragmentButton
 
         secondButton.setOnClickListener {
